@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--ref-ld-chr ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/ \
+--out ./Leisure_Computer_Use.handedness.step4 \
+--rg ./handedness.step1.sumstats.gz,./Leisure_Computer_Use.step1.sumstats.gz \
+--w-ld-chr ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/ 
+
+Beginning analysis at Sun Apr 30 02:00:59 2023
+Reading summary statistics from ./handedness.step1.sumstats.gz ...
+Read summary statistics for 1195299 SNPs.
+Reading reference panel LD Score from ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1293150 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1293150 SNPs.
+After merging with reference panel LD, 1184175 SNPs remain.
+After merging with regression SNP LD, 1184175 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from ./Leisure_Computer_Use.step1.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 1184175 SNPs remain.
+1175032 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0308 (0.003)
+Lambda GC: 1.1144
+Mean Chi^2: 1.1267
+Intercept: 1.0041 (0.0071)
+Ratio: 0.0327 (0.0561)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0015 (5.7283e-05)
+Lambda GC: 1.4926
+Mean Chi^2: 1.6067
+Intercept: 1.0411 (0.0094)
+Ratio: 0.0677 (0.0154)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0002 (0.0002)
+Mean z1*z2: 0.0104
+Intercept: 0.0024 (0.0052)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.0223 (0.0363)
+Z-score: 0.6146
+P: 0.5388
+
+
+Summary of Genetic Correlation Results
+                             p1                                        p2      rg      se       z       p  h2_obs   h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+ ./handedness.step1.sumstats.gz  ./Leisure_Computer_Use.step1.sumstats.gz  0.0223  0.0363  0.6146  0.5388  0.0015  5.7283e-05  1.0411     0.0094    0.0024       0.0052
+
+Analysis finished at Sun Apr 30 02:01:13 2023
+Total time elapsed: 14.74s

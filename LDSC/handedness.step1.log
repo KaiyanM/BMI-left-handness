@@ -1,0 +1,52 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--signed-sumstats Zscore,0 \
+--out ./handedness.step1 \
+--merge-alleles ./HW5/ldsc_inputs/w_hm3.snplist \
+--N 11774187.0 \
+--a1 Allele1 \
+--a2 Allele2 \
+--snp SNP \
+--sumstats ./HW5/sumstats/Left_handedness.txt.gz \
+--p P 
+
+Interpreting column names as follows:
+Zscore:	Directional summary statistic as specified by --signed-sumstats.
+Weight:	Sample size
+Allele2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+Allele1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+SNP:	Variant ID (e.g., rs number)
+
+Reading list of SNPs for allele merge from ./HW5/ldsc_inputs/w_hm3.snplist
+Read 1217311 SNPs for allele merge.
+Reading sumstats from ./HW5/sumstats/Left_handedness.txt.gz into memory 5000000 SNPs at a time.
+Read 11774187 SNPs from --sumstats file.
+Removed 10569570 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 384 variants that were not SNPs or were strand-ambiguous.
+1204233 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (1204233 SNPs remain).
+Removed 8578 SNPs with N < 137690.666667 (1195655 SNPs remain).
+Median value of SIGNED_SUMSTATS was 0.002, which seems sensible.
+Removed 356 SNPs whose alleles did not match --merge-alleles (1195299 SNPs remain).
+Writing summary statistics for 1217311 SNPs (1195299 with nonmissing beta) to ./handedness.step1.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 1.125
+Lambda GC = 1.111
+Max chi^2 = 41.649
+55 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Sun Apr 30 00:39:40 2023
+Total time elapsed: 58.02s

@@ -1,0 +1,54 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--signed-sumstats BETA,0 \
+--out ./Daytime_Napping.step1 \
+--merge-alleles ./HW5/ldsc_inputs/w_hm3.snplist \
+--N 13304132.0 \
+--a1 A1 \
+--a2 A2 \
+--snp SNP \
+--sumstats ./HW5/sumstats/Daytime_Napping.txt \
+--p P 
+
+Interpreting column names as follows:
+INFO:	INFO score (imputation quality; higher --> better imputation)
+EAF:	Allele frequency
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+BETA:	Directional summary statistic as specified by --signed-sumstats.
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+N:	Sample size
+
+Reading list of SNPs for allele merge from ./HW5/ldsc_inputs/w_hm3.snplist
+Read 1217311 SNPs for allele merge.
+Reading sumstats from ./HW5/sumstats/Daytime_Napping.txt into memory 5000000 SNPs at a time.
+Read 13304132 SNPs from --sumstats file.
+Removed 12097736 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 10490 SNPs with INFO <= 0.9.
+Removed 21899 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 203 variants that were not SNPs or were strand-ambiguous.
+1173804 SNPs remain.
+Removed 269 SNPs with duplicated rs numbers (1173535 SNPs remain).
+Removed 0 SNPs with N < 301755.333333 (1173535 SNPs remain).
+Median value of SIGNED_SUMSTATS was -1.4412e-05, which seems sensible.
+Removed 137 SNPs whose alleles did not match --merge-alleles (1173398 SNPs remain).
+Writing summary statistics for 1217311 SNPs (1173398 with nonmissing beta) to ./Daytime_Napping.step1.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 1.788
+Lambda GC = 1.557
+Max chi^2 = 219.13
+1574 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Sun Apr 30 23:00:24 2023
+Total time elapsed: 51.57s

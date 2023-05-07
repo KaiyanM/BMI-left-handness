@@ -1,0 +1,31 @@
+The munging of 1 summary statistics started at 2023-05-02 04:57:23
+Reading in reference file
+Reading summary statistics for Daytime_Napping.txt. Please note that this step usually takes a few minutes due to the size of summary statistic files.
+All files loaded into R!
+
+
+
+Munging file: Daytime_Napping.txt
+Interpreting the SNP column as the SNP column.
+Interpreting the A1 column as the A1 column.
+Interpreting the A2 column as the A2 column.
+Interpreting the BETA column as the effect column.
+Interpreting the INFO column as the INFO column.
+Interpreting the P column as the P column.
+Interpreting the EAF column as the MAF column.
+Interpreting the SE column as the SE column.
+Using provided N (13304132) for file:Daytime_Napping.txt
+Merging file:Daytime_Napping.txt with the reference file:w_hm3.snplist
+13304132 rows present in the full Daytime_Napping.txt summary statistics file.
+12097736 rows were removed from the Daytime_Napping.txt summary statistics file as the rs-ids for these rows were not present in the reference file.
+1152 row(s) were removed from the Daytime_Napping.txt summary statistics file due to the effect allele (A1) column not matching A1 or A2 in the reference file.
+438 row(s) were removed from the Daytime_Napping.txt summary statistics file due to the other allele (A2) column not matching A1 or A2 in the reference file.
+9735 rows were removed from the Daytime_Napping.txt summary statistics file due to INFO values below the designated threshold of0.9
+21555 rows were removed from the Daytime_Napping.txt summary statistics file due to missing MAF information or MAFs below the designated threshold of0.01
+1173516SNPs are left in the summary statistics file Daytime_Napping.txt after QC.
+I am done munging file: Daytime_Napping.txt
+The file is saved as Daytime_Napping.sumstats.gz in the current working directory.
+     
+Munging was completed at 2023-05-02 05:02:34
+The munging of all files took 5 minutes and 10.7289938926697 seconds
+Please check the .log file(s) to ensure that all columns were interpreted correctly and no warnings were issued for any of the summary statistics files

@@ -1,0 +1,162 @@
+Multivariate ld-score regression of 4 traits (HANDNESS.sumstats.gz Schizophrenia.sumstats.gz Daytime_Napping.sumstats.gz Insomnia.sumstats.gz) began at: 2023-05-02 05:03:29
+Reading in LD scores
+Read in summary statistics [1/4] from: HANDNESS.sumstats.gz
+Out of 1187612 SNPs, 1178400 remain after merging with LD-score files
+Removing 0 SNPs with Chi^2 > 11774.187; 1178400 remain
+Read in summary statistics [2/4] from: Schizophrenia.sumstats.gz
+Out of 1135278 SNPs, 1129208 remain after merging with LD-score files
+Removing 0 SNPs with Chi^2 > 7659.767; 1129208 remain
+Read in summary statistics [3/4] from: Daytime_Napping.sumstats.gz
+Out of 1173516 SNPs, 1167036 remain after merging with LD-score files
+Removing 0 SNPs with Chi^2 > 13304.132; 1167036 remain
+Read in summary statistics [4/4] from: Insomnia.sumstats.gz
+Out of 1164073 SNPs, 1137902 remain after merging with LD-score files
+Removing 0 SNPs with Chi^2 > 12663.596; 1137902 remain
+          
+Estimating heritability [1/10] for: HANDNESS.sumstats.gz
+     
+Please note that the results initially printed to the screen and log file reflect the NON-liability h2 and cov_g. However, a liability conversion is being used for trait HANDNESS.sumstats.gz when creating the genetic covariance matrix used as input for Genomic SEM and liability scale results are printed at the end of the log file.
+     
+Heritability Results for trait: HANDNESS.sumstats.gz
+Mean Chi^2 across remaining SNPs: 1.1253
+Lambda GC: 1.1111
+Intercept: 1.0048 (0.0067)
+Ratio: 0.0379 (0.0534)
+Total Observed Scale h2: 5e-04 (1e-04)
+h2 Z: 10.4
+     
+Calculating genetic covariance [2/10] for traits: HANDNESS.sumstats.gz and Schizophrenia.sumstats.gz
+1128568 SNPs remain after merging HANDNESS.sumstats.gz and Schizophrenia.sumstats.gz summary statistics
+Results for genetic covariance between: HANDNESS.sumstats.gz and Schizophrenia.sumstats.gz
+Mean Z*Z: 0.0463
+Cross trait Intercept: -0.0023 (0.0075)
+Total Observed Scale Genetic Covariance (g_cov): 2e-04 (1e-04)
+g_cov Z: 3.52
+g_cov P-value: 0.0004255
+     
+Calculating genetic covariance [3/10] for traits: HANDNESS.sumstats.gz and Daytime_Napping.sumstats.gz
+1166368 SNPs remain after merging HANDNESS.sumstats.gz and Daytime_Napping.sumstats.gz summary statistics
+Results for genetic covariance between: HANDNESS.sumstats.gz and Daytime_Napping.sumstats.gz
+Mean Z*Z: 0.032
+Cross trait Intercept: 0.0044 (0.0062)
+Total Observed Scale Genetic Covariance (g_cov): 1e-04 (1e-04)
+g_cov Z: 1.74
+g_cov P-value: 0.081457
+     
+Calculating genetic covariance [4/10] for traits: HANDNESS.sumstats.gz and Insomnia.sumstats.gz
+1132441 SNPs remain after merging HANDNESS.sumstats.gz and Insomnia.sumstats.gz summary statistics
+Results for genetic covariance between: HANDNESS.sumstats.gz and Insomnia.sumstats.gz
+Mean Z*Z: 0.0167
+Cross trait Intercept: 0.0024 (0.0053)
+Total Observed Scale Genetic Covariance (g_cov): 1e-04 (0)
+g_cov Z: 1.95
+g_cov P-value: 0.05117
+          
+Estimating heritability [5/10] for: Schizophrenia.sumstats.gz
+     
+Please note that the results initially printed to the screen and log file reflect the NON-liability h2 and cov_g. However, a liability conversion is being used for trait Schizophrenia.sumstats.gz when creating the genetic covariance matrix used as input for Genomic SEM and liability scale results are printed at the end of the log file.
+     
+Heritability Results for trait: Schizophrenia.sumstats.gz
+Mean Chi^2 across remaining SNPs: 2.0486
+Lambda GC: 1.7695
+Intercept: 1.0782 (0.0147)
+Ratio: 0.0746 (0.014)
+Total Observed Scale h2: 0.0062 (2e-04)
+h2 Z: 27.9
+     
+Calculating genetic covariance [6/10] for traits: Schizophrenia.sumstats.gz and Daytime_Napping.sumstats.gz
+1125875 SNPs remain after merging Schizophrenia.sumstats.gz and Daytime_Napping.sumstats.gz summary statistics
+Results for genetic covariance between: Schizophrenia.sumstats.gz and Daytime_Napping.sumstats.gz
+Mean Z*Z: 0.1395
+Cross trait Intercept: -0.0026 (0.0088)
+Total Observed Scale Genetic Covariance (g_cov): 7e-04 (1e-04)
+g_cov Z: 7.58
+g_cov P-value: 3.5107e-14
+     
+Calculating genetic covariance [7/10] for traits: Schizophrenia.sumstats.gz and Insomnia.sumstats.gz
+1096572 SNPs remain after merging Schizophrenia.sumstats.gz and Insomnia.sumstats.gz summary statistics
+Results for genetic covariance between: Schizophrenia.sumstats.gz and Insomnia.sumstats.gz
+Mean Z*Z: 0.0333
+Cross trait Intercept: -0.0019 (0.0077)
+Total Observed Scale Genetic Covariance (g_cov): 1e-04 (1e-04)
+g_cov Z: 1.83
+g_cov P-value: 0.067879
+          
+Estimating heritability [8/10] for: Daytime_Napping.sumstats.gz
+     
+Please note that the results initially printed to the screen and log file reflect the NON-liability h2 and cov_g. However, a liability conversion is being used for trait Daytime_Napping.sumstats.gz when creating the genetic covariance matrix used as input for Genomic SEM and liability scale results are printed at the end of the log file.
+     
+Heritability Results for trait: Daytime_Napping.sumstats.gz
+Mean Chi^2 across remaining SNPs: 1.784
+Lambda GC: 1.557
+Intercept: 1.0355 (0.0115)
+Ratio: 0.0453 (0.0146)
+Total Observed Scale h2: 0.0028 (1e-04)
+h2 Z: 24.3
+     
+Calculating genetic covariance [9/10] for traits: Daytime_Napping.sumstats.gz and Insomnia.sumstats.gz
+1130485 SNPs remain after merging Daytime_Napping.sumstats.gz and Insomnia.sumstats.gz summary statistics
+Results for genetic covariance between: Daytime_Napping.sumstats.gz and Insomnia.sumstats.gz
+Mean Z*Z: 0.1405
+Cross trait Intercept: 0.0516 (0.0066)
+Total Observed Scale Genetic Covariance (g_cov): 4e-04 (1e-04)
+g_cov Z: 7.4
+g_cov P-value: 1.402e-13
+          
+Estimating heritability [10/10] for: Insomnia.sumstats.gz
+     
+Please note that the results initially printed to the screen and log file reflect the NON-liability h2 and cov_g. However, a liability conversion is being used for trait Insomnia.sumstats.gz when creating the genetic covariance matrix used as input for Genomic SEM and liability scale results are printed at the end of the log file.
+     
+Heritability Results for trait: Insomnia.sumstats.gz
+Mean Chi^2 across remaining SNPs: 1.3636
+Lambda GC: 1.3067
+Intercept: 1.0125 (0.0089)
+Ratio: 0.0345 (0.0244)
+Total Observed Scale h2: 0.0014 (1e-04)
+h2 Z: 21.9
+     
+      
+Liability Scale Results
+     
+Liability scale results for: HANDNESS
+Total Liability Scale h2: 6e-04 (1e-04)
+Total Liability Scale Genetic Covariance between HANDNESS and Schizophrenia: 3e-04 (1e-04)
+     
+Total Liability Scale Genetic Covariance between HANDNESS and Daytime_Napping: 1e-04 (1e-04)
+     
+Total Liability Scale Genetic Covariance between HANDNESS and Insomnia: 1e-04 (0)
+     
+     
+Liability scale results for: Schizophrenia
+Total Liability Scale h2: 0.0091 (3e-04)
+Total Liability Scale Genetic Covariance between Schizophrenia and Daytime_Napping: 0.001 (1e-04)
+     
+Total Liability Scale Genetic Covariance between Schizophrenia and Insomnia: 2e-04 (1e-04)
+     
+     
+Liability scale results for: Daytime_Napping
+Total Liability Scale h2: 0.004 (2e-04)
+Total Liability Scale Genetic Covariance between Daytime_Napping and Insomnia: 5e-04 (1e-04)
+     
+     
+Liability scale results for: Insomnia
+Total Liability Scale h2: 0.0015 (1e-04)
+     
+      
+Genetic Correlation Results
+Genetic Correlation between HANDNESS and Schizophrenia: 0.1292 (0.0367)
+     
+Genetic Correlation between HANDNESS and Daytime_Napping: 0.0763 (0.0438)
+     
+Genetic Correlation between HANDNESS and Insomnia: 0.0802 (0.0411)
+     
+Genetic Correlation between Schizophrenia and Daytime_Napping: 0.1681 (0.0222)
+     
+Genetic Correlation between Schizophrenia and Insomnia: 0.0462 (0.0253)
+     
+Genetic Correlation between Daytime_Napping and Insomnia: 0.1943 (0.0263)
+     
+     
+LDSC finished running at 2023-05-02 05:05:26
+Running LDSC for all files took 1 minutes and 57 seconds
+     

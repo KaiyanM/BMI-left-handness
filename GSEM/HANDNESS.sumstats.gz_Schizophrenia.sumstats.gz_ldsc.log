@@ -1,0 +1,61 @@
+Multivariate ld-score regression of 2 traits (HANDNESS.sumstats.gz Schizophrenia.sumstats.gz) began at: 2023-05-02 03:37:31
+Reading in LD scores
+Read in summary statistics [1/2] from: HANDNESS.sumstats.gz
+Out of 1187612 SNPs, 1178400 remain after merging with LD-score files
+Removing 0 SNPs with Chi^2 > 11774.187; 1178400 remain
+Read in summary statistics [2/2] from: Schizophrenia.sumstats.gz
+Out of 1135278 SNPs, 1129208 remain after merging with LD-score files
+Removing 0 SNPs with Chi^2 > 7659.767; 1129208 remain
+          
+Estimating heritability [1/3] for: HANDNESS.sumstats.gz
+     
+Please note that the results initially printed to the screen and log file reflect the NON-liability h2 and cov_g. However, a liability conversion is being used for trait HANDNESS.sumstats.gz when creating the genetic covariance matrix used as input for Genomic SEM and liability scale results are printed at the end of the log file.
+     
+Heritability Results for trait: HANDNESS.sumstats.gz
+Mean Chi^2 across remaining SNPs: 1.1253
+Lambda GC: 1.1111
+Intercept: 1.0048 (0.0067)
+Ratio: 0.0379 (0.0534)
+Total Observed Scale h2: 5e-04 (1e-04)
+h2 Z: 10.4
+     
+Calculating genetic covariance [2/3] for traits: HANDNESS.sumstats.gz and Schizophrenia.sumstats.gz
+1128568 SNPs remain after merging HANDNESS.sumstats.gz and Schizophrenia.sumstats.gz summary statistics
+Results for genetic covariance between: HANDNESS.sumstats.gz and Schizophrenia.sumstats.gz
+Mean Z*Z: 0.0463
+Cross trait Intercept: -0.0023 (0.0075)
+Total Observed Scale Genetic Covariance (g_cov): 2e-04 (1e-04)
+g_cov Z: 3.52
+g_cov P-value: 0.0004255
+          
+Estimating heritability [3/3] for: Schizophrenia.sumstats.gz
+     
+Please note that the results initially printed to the screen and log file reflect the NON-liability h2 and cov_g. However, a liability conversion is being used for trait Schizophrenia.sumstats.gz when creating the genetic covariance matrix used as input for Genomic SEM and liability scale results are printed at the end of the log file.
+     
+Heritability Results for trait: Schizophrenia.sumstats.gz
+Mean Chi^2 across remaining SNPs: 2.0486
+Lambda GC: 1.7695
+Intercept: 1.0782 (0.0147)
+Ratio: 0.0746 (0.014)
+Total Observed Scale h2: 0.0062 (2e-04)
+h2 Z: 27.9
+     
+      
+Liability Scale Results
+     
+Liability scale results for: HANDNESS
+Total Liability Scale h2: 6e-04 (1e-04)
+Total Liability Scale Genetic Covariance between HANDNESS and Schizophrenia: 3e-04 (1e-04)
+     
+     
+Liability scale results for: Schizophrenia
+Total Liability Scale h2: 0.0091 (3e-04)
+     
+      
+Genetic Correlation Results
+Genetic Correlation between HANDNESS and Schizophrenia: 0.1292 (0.0367)
+     
+     
+LDSC finished running at 2023-05-02 03:38:10
+Running LDSC for all files took 0 minutes and 39 seconds
+     

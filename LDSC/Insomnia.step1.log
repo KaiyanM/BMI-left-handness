@@ -1,0 +1,51 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--signed-sumstats OR,1 \
+--out ./Insomnia.step1 \
+--merge-alleles ./HW5/ldsc_inputs/w_hm3.snplist \
+--N 12663596.0 \
+--a1 A1 \
+--a2 A2 \
+--snp RSID_UKB \
+--sumstats ./HW5/sumstats/Insomnia_edit.txt \
+--p P 
+
+Interpreting column names as follows:
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+OR:	Directional summary statistic as specified by --signed-sumstats.
+RSID_UKB:	Variant ID (e.g., rs number)
+
+Reading list of SNPs for allele merge from ./HW5/ldsc_inputs/w_hm3.snplist
+Read 1217311 SNPs for allele merge.
+Reading sumstats from ./HW5/sumstats/Insomnia_edit.txt into memory 5000000 SNPs at a time.
+Read 12663596 SNPs from --sumstats file.
+Removed 11498431 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 458 variants that were not SNPs or were strand-ambiguous.
+1164707 SNPs remain.
+Removed 570 SNPs with duplicated rs numbers (1164137 SNPs remain).
+Using N = 12663596.0
+Median value of SIGNED_SUMSTATS was 1.0, which seems sensible.
+Removed 333 SNPs whose alleles did not match --merge-alleles (1163804 SNPs remain).
+Writing summary statistics for 1217311 SNPs (1163804 with nonmissing beta) to ./Insomnia.step1.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 1.358
+Lambda GC = 1.301
+Max chi^2 = 95.05
+126 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon May  1 00:01:50 2023
+Total time elapsed: 46.05s

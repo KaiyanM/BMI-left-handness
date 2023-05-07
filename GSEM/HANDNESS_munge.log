@@ -1,0 +1,30 @@
+The munging of 1 summary statistics started at 2023-05-02 02:31:11
+Reading in reference file
+Reading summary statistics for Left_handedness.txt. Please note that this step usually takes a few minutes due to the size of summary statistic files.
+All files loaded into R!
+
+
+
+Munging file: Left_handedness.txt
+Interpreting the SNP column as the SNP column.
+Interpreting the ALLELE1 column as the A1 column.
+Interpreting the ALLELE2 column as the A2 column.
+Interpreting the ZSCORE column as the effect column.
+Interpreting the P column as the P column.
+Interpreting the FREQ1 column as the MAF column.
+Interpreting the DIRECTION column as the DIRECTION column.
+Using provided N (11774187) for file:Left_handedness.txt
+Merging file:Left_handedness.txt with the reference file:w_hm3.snplist
+11774187 rows present in the full Left_handedness.txt summary statistics file.
+10569570 rows were removed from the Left_handedness.txt summary statistics file as the rs-ids for these rows were not present in the reference file.
+375 row(s) were removed from the Left_handedness.txt summary statistics file due to the effect allele (A1) column not matching A1 or A2 in the reference file.
+378 row(s) were removed from the Left_handedness.txt summary statistics file due to the other allele (A2) column not matching A1 or A2 in the reference file.
+No INFO column, cannot filter on INFO, which may influence results
+16252 rows were removed from the Left_handedness.txt summary statistics file due to missing MAF information or MAFs below the designated threshold of0.01
+1187612SNPs are left in the summary statistics file Left_handedness.txt after QC.
+I am done munging file: Left_handedness.txt
+The file is saved as HANDNESS.sumstats.gz in the current working directory.
+     
+Munging was completed at 2023-05-02 02:35:30
+The munging of all files took 4 minutes and 18.9833018779755 seconds
+Please check the .log file(s) to ensure that all columns were interpreted correctly and no warnings were issued for any of the summary statistics files

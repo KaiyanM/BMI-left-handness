@@ -1,0 +1,148 @@
+---
+title: "Untitled"
+author: "mky"
+date: "2023-05-02"
+output: html_document
+---
+
+```{r}
+library(devtools)
+install_github("GenomicSEM/GenomicSEM")
+library("GenomicSEM")
+library(data.table)
+
+# read GWAS summary statistics
+gwas <- as.data.frame(fread("./ldsc/HW5/sumstats/Left_handedness.txt",header=T))
+
+nrow(gwas) #11774187
+```
+
+
+```{r}
+#create vector of the summary statistics files
+files<- "Left_handedness.txt"
+
+#define the reference file being used to allign alleles across summary stats
+#here we are using hapmap3
+hm3<-"w_hm3.snplist"
+
+#name the traits 
+trait.names<-"HANDNESS"
+
+#list the sample sizes. All but PTSD have SNP-specific sum of effective sample sizes so only its
+#sample size is listed here
+N= 11774187
+
+#definte the imputation quality filter
+info.filter=0.9
+
+#define the MAF filter
+maf.filter=0.01
+
+#run munge
+munge(files=files,hm3=hm3,trait.names=trait.names,N=N,info.filter=info.filter,maf.filter=maf.filter)
+
+```
+
+```{r}
+#create vector of the summary statistics files
+files<- "Daytime_Napping.txt"
+
+#define the reference file being used to allign alleles across summary stats
+#here we are using hapmap3
+hm3<-"w_hm3.snplist"
+
+#name the traits 
+trait.names<-"Daytime_Napping"
+
+#list the sample sizes. All but PTSD have SNP-specific sum of effective sample sizes so only its
+#sample size is listed here
+N= 13304132
+
+#definte the imputation quality filter
+info.filter=0.9
+
+#define the MAF filter
+maf.filter=0.01
+
+#run munge
+munge(files=files,hm3=hm3,trait.names=trait.names,N=N,info.filter=info.filter,maf.filter=maf.filter)
+
+```
+
+
+```{r}
+#create vector of the summary statistics files
+files<- c("Cannabis_Dependence.txt","Daytime_Napping.txt","Insomnia.txt","Leisure_Computer_Use.txt")
+
+#define the reference file being used to allign alleles across summary stats
+#here we are using hapmap3
+hm3<-"w_hm3.snplist"
+
+#name the traits 
+trait.names<-c("Cannabis_Dependence","Daytime_Napping","Insomnia","Leisure_Computer_Use")
+
+#list the sample sizes. All but PTSD have SNP-specific sum of effective sample sizes so only its
+#sample size is listed here
+N= c(8957569,13304132,12663596,19400417)
+
+#definte the imputation quality filter
+info.filter=0.9
+
+#define the MAF filter
+maf.filter=0.01
+
+#run munge
+munge(files=files,hm3=hm3,trait.names=trait.names,N=N,info.filter=info.filter,maf.filter=maf.filter)
+
+```
+
+
+```{r}
+#vector of munged summary statisitcs
+traits<-c("HANDNESS.sumstats.gz","Schizophrenia.sumstats.gz","Daytime_Napping.sumstats.gz","Insomnia.sumstats.gz")
+
+#enter sample prevalence of .5 to reflect that all traits were munged using the sum of effective sample size
+sample.prev<- c(.5,.5,.5,.5)
+
+#vector of population prevalences
+population.prev<- c(.15,.32,.25,.1)
+
+#the folder of LD scores
+ld<-"eur_w_ld_chr/"
+
+#the folder of LD weights [typically the same as folder of LD scores]
+wld<-"eur_w_ld_chr/"
+
+#name the traits
+trait.names<- c("HANDNESS","Schizophrenia","Daytime_Napping","Insomnia")
+
+#run LDSC
+LDSCoutput<-ldsc(traits=traits,sample.prev=sample.prev,population.prev=population.prev,ld=ld,wld=wld,trait.names=trait.names)
+
+#optional command to save the output as a .RData file for later use
+save(LDSCoutput,file="LDSCoutput.RData")
+```
+
+```{r}
+par(mfrow=c(2,2))
+heatmap(t(LDSCoutput$S))
+heatmap(t(LDSCoutput$V))
+```
+```{r}
+heatmap(t(LDSCoutput$V))
+```
+
+
+```{r}
+#To run using DWLS estimation#
+CommonFactor_DWLS<- commonfactor(covstruc = LDSCoutput, estimation="DWLS")
+
+#print CommonFactor_DWLs output#
+CommonFactor_DWLS
+```
+```{r}
+library(semPlot)
+
+```
+

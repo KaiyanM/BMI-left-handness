@@ -1,0 +1,30 @@
+Multivariate ld-score regression of 1 traits (HANDNESS.sumstats.gz) began at: 2023-05-02 03:30:47
+Reading in LD scores
+Read in summary statistics [1/1] from: HANDNESS.sumstats.gz
+Out of 1187612 SNPs, 1178400 remain after merging with LD-score files
+Removing 0 SNPs with Chi^2 > 11774.187; 1178400 remain
+          
+Estimating heritability [1/1] for: HANDNESS.sumstats.gz
+     
+Please note that the results initially printed to the screen and log file reflect the NON-liability h2 and cov_g. However, a liability conversion is being used for trait HANDNESS.sumstats.gz when creating the genetic covariance matrix used as input for Genomic SEM and liability scale results are printed at the end of the log file.
+     
+Heritability Results for trait: HANDNESS.sumstats.gz
+Mean Chi^2 across remaining SNPs: 1.1253
+Lambda GC: 1.1111
+Intercept: 1.0048 (0.0067)
+Ratio: 0.0379 (0.0534)
+Total Observed Scale h2: 5e-04 (1e-04)
+h2 Z: 10.4
+     
+      
+Liability Scale Results
+     
+Liability scale results for: HANDNESS
+Total Liability Scale h2: 6e-04 (1e-04)
+     
+      
+Genetic Correlation Results
+     
+LDSC finished running at 2023-05-02 03:31:13
+Running LDSC for all files took 0 minutes and 26 seconds
+     

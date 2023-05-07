@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--ref-ld-chr ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/ \
+--out ./Daytime_Napping.handedness.step4 \
+--rg ./handedness.step1.sumstats.gz,./Daytime_Napping.step1.sumstats.gz \
+--w-ld-chr ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/ 
+
+Beginning analysis at Sun Apr 30 23:01:13 2023
+Reading summary statistics from ./handedness.step1.sumstats.gz ...
+Read summary statistics for 1195299 SNPs.
+Reading reference panel LD Score from ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1293150 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from ./HW5/ldsc_inputs/for_h2/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1293150 SNPs.
+After merging with reference panel LD, 1184175 SNPs remain.
+After merging with regression SNP LD, 1184175 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from ./Daytime_Napping.step1.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 1184175 SNPs remain.
+1169255 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0308 (0.0029)
+Lambda GC: 1.1144
+Mean Chi^2: 1.1276
+Intercept: 1.0046 (0.007)
+Ratio: 0.0362 (0.0551)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0839 (0.0034)
+Lambda GC: 1.5585
+Mean Chi^2: 1.7897
+Intercept: 1.0355 (0.0116)
+Ratio: 0.045 (0.0147)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.004 (0.0022)
+Mean z1*z2: 0.0346
+Intercept: 0.0042 (0.0061)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.0781 (0.0434)
+Z-score: 1.7997
+P: 0.0719
+
+
+Summary of Genetic Correlation Results
+                             p1                                   p2      rg      se       z       p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+ ./handedness.step1.sumstats.gz  ./Daytime_Napping.step1.sumstats.gz  0.0781  0.0434  1.7997  0.0719  0.0839     0.0034  1.0355     0.0116    0.0042       0.0061
+
+Analysis finished at Sun Apr 30 23:01:28 2023
+Total time elapsed: 14.86s
